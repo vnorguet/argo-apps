@@ -13,7 +13,7 @@ end
 task :create, [:application] do |t, args|
   puts "Create argo project for #{args.application}"
   command = "argocd app create #{args.application} \
-    --repo https://gitlab.com/neutronium-external/app-of-apps-demo.git \
+    --repo https://github.com/vnorguet/argo-apps.git \
     --path #{args.application} \
     --dest-server https://kubernetes.default.svc \
     --dest-namespace #{args.application}"
